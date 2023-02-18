@@ -1,0 +1,25 @@
+<--------------JavaScript Notes-------------->
+    if(currDay === 6 || currDay === 0){
+
+        // res.send("Yay! It's the weekend"); can be sent only once
+        // res.write("<h1>Yay! It's the weekend</h1>"); //for sending multiple things
+        // res.write("<h2>Yay! It's the weekend</h2>");
+        // res.sendFile(__dirname+"/index.html");
+
+        day = week[currDay];
+    }
+    else{
+        day = week[currDay];
+        
+    }
+
+    <--------------EJS Notes-------------->
+        <% if(kindOfDay == "Sunday" || kindOfDay == "Saturday"){ %>
+            <h1 style="color:blue">
+                <%= kindOfDay %> ToDo List    
+            </h1>
+        <% }else{ %>
+            <h1>
+                <%= kindOfDay %> ToDo List    
+            </h1>
+        <% } %>

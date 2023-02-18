@@ -1,0 +1,28 @@
+<%- include("header") %>
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a  href="/work">Work</a>
+        <a id="sampad" href="https://linktr.ee/sampadadhikary" target="_blank">Sampad Adhikary</a>
+      </div>
+
+    <div class="box" id="heading">
+        <h2><%= kindOfDay %></h2>
+    </div>
+    
+    <div class="box" >
+            <%for(var i=0;i<newListItems.length;i++){ %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p> <%= newListItems[i] %> </p>
+                </div>
+                
+            <%}%>
+            <form action="/" method="post">
+                <input type="text" name="newItem" placeholder="add new task" autocomplete="off">
+                <button type="submit" name="button" value = <%= kindOfDay %>>+</button>
+            </form>
+    </div>
+
+</body>
+<%- include("footer") %>
