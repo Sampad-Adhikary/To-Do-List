@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require('lodash');
 
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB", {
+mongoose.connect("mongodb+srv://sampad12002655:85CHi1WvCx1CqfQi@sampadcluster.w3akitn.mongodb.net/todolistDB", {
   useNewUrlParser: true,
 });
 
@@ -83,7 +83,7 @@ app.get("/:customListName",(req,res)=>{
     
 })
 
-app.post("/",(req,res)=>{
+app.post("/routing",(req,res)=>{
     const route = req.body.customList;
     res.redirect("/"+route);
 })
@@ -131,5 +131,5 @@ app.post("/delete",(req,res)=>{
 })
 
 app.listen(process.env.PORT || 5000, function () {
-  console.log("Server started on port 3000");
+  console.log("Server started on port 5000");
 });
